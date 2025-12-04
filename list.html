@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JA DOM CRUD - List</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="site-header"></div>
+    
+    <main class="container">
+        <h1>Items</h1>
+
+        <input id="search" type="search" placeholder="Search by title...">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+
+        <!-- edit form hidden by default -->
+         <div id="edit-modal" class="modal hidden" aria-hidden="true">
+            <div class="modal-content">
+                <h2>Edit Item</h2>
+                <form id="edit-form" novalidate>
+                    <input type="hidden" id="edit-id">
+
+                    <label for="edit-title">Title</label>
+                    <input id="edit-title" name="title" type="text" required>
+                    <small class="error" data-for="edit-title"></small>
+
+                    <label for="edit-description">Description</label>
+                    <textarea id="edit-description" name="description" rows="3"></textarea>
+                    <small class="error" data-for="edit-description"></small>
+
+                    <label for="edit-email">Email</label>
+                    <input id="edit-email" name="email" type="email" required>
+                    <small class="error" data-for="edit-email"></small>
+
+                    <div class="actions">
+                        <button type="submit">Update</button>
+                        <button id="cancel-edit" type="button">Cancel</button>
+                    </div>
+                </form>
+            </div>
+         </div>
+
+         <div id="message" class="message" aria-live="polite"></div>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
