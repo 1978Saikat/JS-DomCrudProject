@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>JS DOM CRUD PROJECT</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="site-header"></div> <!-- Header will be inserted here -->
+
+    <!-- main container -->
+     <main class="container">
+        <form id="item-form" novalidate>
+            <!-- field: title -->
+            <label for="title">Title</label>
+            <input id="title" name="title" type="text" required placeholder="Enter title">
+            <small class="error" data-for="title"></small>
+
+            <!-- field: description -->
+            <label for="description">Description</label>
+            <textarea id="description" name="description" rows="4" placeholder="Enter description"></textarea>
+            <small class="error" data-for="description"></small>
+
+            <!-- field: email -->
+            <label for="email">Your Email</label>
+            <input id="email" name="email" type="email" required placeholder="name@example.com">
+            <small class="error" data-for="email"></small>
+
+            <!-- form action -->
+             <div class="actions">
+                <button id="save-btn" type="submit">Save</button>
+                <a id="btn-link" href="list.html">View List</a>
+             </div>
+        </form>
+     </main> <!-- container ends here -->
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
